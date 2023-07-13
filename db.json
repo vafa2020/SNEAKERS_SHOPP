@@ -1,0 +1,148 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "AdidasZx8000",
+      "brand": "Adidas",
+      "size": 42,
+      "color": "yellow",
+      "description": [
+        { "support": "گارانتی مادام العمر" },
+        { "support": "اورجینال" },
+        { "support": "ارسال رایگان" }
+      ],
+      "price": 7000000,
+      "offPrice": 6000000,
+      "discount": 15,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/e8fed128eee30a8b8276d4319faf819f3fdefd6e_1610230851.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80"
+    },
+    {
+      "id": 2,
+      "name": "AdidasZxFlux",
+      "brand": "Adidas",
+      "size": 42,
+      "color": "blue",
+      "description": [
+        { "support": "گارانتی مادام العمر" },
+        { "support": "اورجینال" },
+        { "support": "ارسال رایگان" }
+      ],
+      "price": 9000000,
+      "offPrice": 7800000,
+      "discount": 15,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/115153650.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80"
+    },
+    {
+      "id": 3,
+      "name": "AdidusUltraBoost",
+      "brand": "Adidas",
+      "size": 41,
+      "color": "gray",
+      "description": [
+        { "support": "گارانتی مادام العمر" },
+        { "support": "اورجینال" },
+        { "support": "ارسال رایگان" }
+      ],
+      "price": 9500000,
+      "offPrice": 7800000,
+      "discount": 30,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/da31087538d25a2bd21335b7db44629b1b902661_1627663675.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80"
+    },
+    {
+      "id": 4,
+      "name": "PumaBmw",
+      "brand": "Puma",
+      "size": 41,
+      "color": "black",
+      "description": [
+        { "support": "گارانتی مادام العمر" },
+        { "support": "اورجینال" },
+        { "support": "ارسال رایگان" }
+      ],
+      "price": 5500000,
+      "offPrice": 3500000,
+      "discount": 20,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/fcc8d21710d84158b34a9be7bce13642e9683724_1629115460.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80"
+    },
+    {
+      "id": 5,
+      "name": "PumaDrift",
+      "brand": "Puma",
+      "size": 40,
+      "color": "white",
+      "description": [
+        { "support": "گارانتی مادام العمر" },
+        { "support": "اورجینال" },
+        { "support": "ارسال رایگان" }
+      ],
+      "price": 4800000,
+      "offPrice": 2800000,
+      "discount": 12,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/b6d24e11808cb72ed8cdf374368fb3b0ea298e74_1629062955.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80"
+    },
+    {
+      "id": 6,
+      "name": "PumaHybrid",
+      "brand": "Puma",
+      "size": 44,
+      "color": "black",
+      "description": [
+        { "support": "گارانتی مادام العمر" },
+        { "support": "اورجینال" },
+        { "support": "ارسال رایگان" }
+      ],
+      "price": 3600000,
+      "offPrice": 2000000,
+      "discount": 35,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/119605579.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80"
+    },
+    {
+      "id": 7,
+      "name": "NikeAirJordan1Retro",
+      "brand": "Nike",
+      "size": 44,
+      "color": "red",
+      "description": [
+        { "support": "گارانتی مادام العمر" },
+        { "support": "اورجینال" },
+        { "support": "ارسال رایگان" }
+      ],
+      "price": 3500000,
+      "offPrice": 2000000,
+      "discount": 15,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/118962631.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80"
+    },
+    {
+      "id": 8,
+      "name": "NikeAirJordan4Retro",
+      "brand": "Nike",
+      "size": 43,
+      "color": "blue",
+      "description": [
+        { "support": "گارانتی مادام العمر" },
+        { "support": "اورجینال" },
+        { "support": "ارسال رایگان" }
+      ],
+      "price": 6500000,
+      "offPrice": 5500000,
+      "discount": 10,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/8c42b92e8601d6f36a21a3587ec4364432e630a9_1599569152.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80"
+    },
+    {
+      "id": 9,
+      "name": "NikeAirJordanBasketball",
+      "brand": "Nike",
+      "size": 43,
+      "color": "pink",
+      "description": [
+        { "support": "گارانتی مادام العمر" },
+        { "support": "اورجینال" },
+        { "support": "ارسال رایگان" }
+      ],
+      "price": 4000000,
+      "offPrice": 2800000,
+      "discount": 30,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/2c297285b9389d23965c8f9ab13c01128a44ca8d_1635712010.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80"
+    }
+  ]
+}
