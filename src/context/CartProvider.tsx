@@ -44,7 +44,6 @@ export const useCart = (): IinitialState => {
 export const useCartDispatch = (): Dispatch<cartActions> => {
   const dispatch = useContext(cartContextDispatch);
   if (dispatch === null) {
-    
     throw new Error("useCartDispatch must be used within a cartProvider");
   }
   return dispatch;

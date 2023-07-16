@@ -14,11 +14,10 @@ export const initialState = {
 
 export const cartReducer = (state: IinitialState, action: cartActions) => {
   const { payload, type } = action;
-  console.log(payload, type);
 
   switch (type) {
-    case "AddToCart":
-      return state;
+    case "AddToCart": 
+    return state;
     case "RemoveOfCart":
       return state;
     case "increment":

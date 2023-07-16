@@ -11,6 +11,7 @@ export interface IproductFetch {
   offPrice: number;
   discount: number;
   image: string;
+  qty?: number;
 }
 
 export const fetchProduct = async (): Promise<IproductFetch[] | undefined> => {

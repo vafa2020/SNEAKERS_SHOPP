@@ -1,4 +1,9 @@
-export const commaMoney = (money: number): string => {
-  let calc = money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  return calc;
+const currencyFormat= new Intl.NumberFormat("fa-IR", {
+  style: "currency",
+  currency: "IRR",
+  maximumFractionDigits: 2,
+});
+
+export const commaMoney = (money: number) => {
+  return currencyFormat.format(money);
 };
