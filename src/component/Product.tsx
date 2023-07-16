@@ -1,3 +1,4 @@
+import { useCartDispatch } from "../context/CartProvider";
 import { IproductFetch } from "../services/fetchProduct";
 import { commaMoney } from "../utils/Helper";
 interface dataProps {
@@ -5,6 +6,11 @@ interface dataProps {
 }
 
 const Product: React.FC<dataProps> = ({ data }) => {
+  const disptch = useCartDispatch();
+
+  const addHandler = (product: IproductFetch) => {
+    disptch({type:"AddToCart", payload: product });
+  };
   return (
     <div className="grid grid-cols-3 gap-3 grow">
       {data?.map((product) => (
@@ -26,7 +32,10 @@ const Product: React.FC<dataProps> = ({ data }) => {
               <span>{commaMoney(product.offPrice)}</span>
               <span>{product.name}</span>
             </div>
-            <button className="bg-green-500 text-white py-2 mt-2 rounded-lg">
+            <button
+              onClick={() => addHandler(product)}
+              className="bg-green-500 text-white py-2 mt-2 rounded-lg"
+            >
               AddToCart
             </button>
           </div>

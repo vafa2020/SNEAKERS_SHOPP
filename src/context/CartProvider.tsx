@@ -34,10 +34,18 @@ export default CartProvider;
 // interface useCartProps {
 //   cart: () => IinitialState;
 // }
-export const useCart: React.FC<()=>IinitialState> = () => {
+export const useCart = (): IinitialState => {
   const cart = useContext(cartContext);
   if (cart === null) {
     throw new Error("useCart must be used within a cartProvider");
   }
   return cart;
+};
+export const useCartDispatch = (): Dispatch<cartActions> => {
+  const dispatch = useContext(cartContextDispatch);
+  if (dispatch === null) {
+    
+    throw new Error("useCartDispatch must be used within a cartProvider");
+  }
+  return dispatch;
 };

@@ -8,13 +8,14 @@ type Decrement = { type: "Decrement"; payload: number };
 export type cartActions = AddToCart | RemoveOfCart | Increment | Decrement;
 
 export const initialState = {
-    cart: [],
-    total: 0,
-  };
-
+  cart: [],
+  total: 0,
+};
 
 export const cartReducer = (state: IinitialState, action: cartActions) => {
   const { payload, type } = action;
+  console.log(payload, type);
+
   switch (type) {
     case "AddToCart":
       return state;
