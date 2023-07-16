@@ -1,20 +1,21 @@
-import React, { createContext, useReducer, Reducer ,Dispatch} from "react";
-import { cartActions, cartReducer } from "./cart/reducer";
+import React, {
+  createContext,
+  useReducer,
+  Reducer,
+  Dispatch,
+  useContext,
+} from "react";
+import { cartActions, cartReducer, initialState } from "./cart/reducer";
 import { IinitialState } from "./cart/type";
 
-type propsLayout = {
+type CartProviderProps = {
   children: React.ReactNode;
 };
-const initialState = {
-  cart: [],
-  total: 0,
-};
+
 const cartContext = createContext<IinitialState | null>(null);
-const cartContextDispatch = createContext<cartActions  | null>(null);
+const cartContextDispatch = createContext<Dispatch<cartActions> | null>(null);
 
-
-
-const CartProvider: React.FC<propsLayout> = ({ children }) => {
+const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const [cart, dispatch] = useReducer<Reducer<IinitialState, cartActions>>(
     cartReducer,
     initialState
@@ -29,3 +30,14 @@ const CartProvider: React.FC<propsLayout> = ({ children }) => {
 };
 
 export default CartProvider;
+
+// interface useCartProps {
+//   cart: () => IinitialState;
+// }
+export const useCart: React.FC<()=>IinitialState> = () => {
+  const cart = useContext(cartContext);
+  if (cart === null) {
+    throw new Error("useCart must be used within a cartProvider");
+  }
+  return cart;
+};
