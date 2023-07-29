@@ -1,3 +1,4 @@
+import { log } from "console";
 import { IproductFetch } from "../../services/fetchProduct";
 import { IinitialState } from "./type";
 
@@ -17,22 +18,21 @@ export const cartReducer = (state: IinitialState, action: cartActions) => {
 
   switch (type) {
     case "AddToCart": {
-      const cloneState = [...state.cart];
-      const findIndexItem = cloneState.findIndex((p) => p.id === payload.id);
-      const product = { ...cloneState[findIndexItem] };
-      if (findIndexItem > 0 && product.qty !== undefined) {
-        product.qty++;
-        cloneState[findIndexItem] = product;
-        return {
-          cart: cloneState,
-          total: state.total + payload.offPrice,
-        };
+      const updatedCart = [...state.cart];
+      const findIndexItem = updatedCart.findIndex((p) => p.id === payload.id);
+      const updatedItem = { ...updatedCart[findIndexItem] };
+      console.log(updatedItem.qty);
+
+      if (findIndexItem >= 0 && updatedItem.qty !== undefined) {
+        updatedItem.qty++;
+        updatedCart[findIndexItem] = updatedItem;
+      } else {
+        updatedCart.push({ ...payload, qty: 1 });
       }
 
-      const updateArray = cloneState.push({ ...payload, qty: 1 });
       return {
-        cart: [...state.cart, updateArray],
-        total: payload.offPrice,
+        cart: updatedCart,
+        total: state.total + payload.offPrice,
       };
     }
     case "RemoveOfCart":
