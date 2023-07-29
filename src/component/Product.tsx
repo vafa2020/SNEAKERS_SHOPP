@@ -1,4 +1,4 @@
-import { useCartDispatch } from "../context/CartProvider";
+import { useCart, useCartDispatch } from "../context/CartProvider";
 import { IproductFetch } from "../services/fetchProduct";
 import { commaMoney } from "../utils/Helper";
 interface dataProps {
@@ -7,9 +7,11 @@ interface dataProps {
 
 const Product: React.FC<dataProps> = ({ data }) => {
   const disptch = useCartDispatch();
+  const cart = useCart();
+  console.log(cart);
 
   const addHandler = (product: IproductFetch) => {
-    disptch({type:"AddToCart", payload: product });
+    disptch({ type: "AddToCart", payload: product });
   };
   return (
     <div className="grid grid-cols-3 gap-3 grow">
