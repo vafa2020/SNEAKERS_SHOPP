@@ -1,12 +1,12 @@
 import { useCart } from "../context/CartProvider";
+import { BiPlus, BiMinus } from "react-icons/bi";
 
 const Cart = () => {
   const { cart, total } = useCart();
-  console.log(cart);
 
   return (
     <div className="flex items-start">
-      <div className="flex-grow bg-blue-800">
+      <div className="flex-grow">
         <h1>سبد خرید</h1>
         <div>
           <table className="w-full text-center">
@@ -37,9 +37,13 @@ const Cart = () => {
                   </td>
                   <td>
                     <div>
-                      <button>+</button>
+                      <button className="w-8 h-8 rounded-sm bg-green-500 text-white" >
+                        <BiPlus/>
+                      </button>
                       <span>{item.qty}</span>
-                      <button> -</button>
+                      <button className="w-8 h-8 rounded-sm bg-red-500 text-white">
+                        <BiMinus />
+                      </button>
                     </div>
                   </td>
                   <td>

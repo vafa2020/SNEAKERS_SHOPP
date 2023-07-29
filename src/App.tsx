@@ -6,14 +6,14 @@ import Cart from "./pages/Cart";
 
 function App() {
   return (
-    <Layout>
-      <CartProvider>
+    <CartProvider>
+      <Layout>
         <Routes>
           <Route path="/" element={<ProductList />} />
           <Route path="cart" element={<Cart />} />
         </Routes>
-      </CartProvider>
-    </Layout>
+      </Layout>
+    </CartProvider>
   );
 }
 

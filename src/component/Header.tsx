@@ -1,6 +1,8 @@
 import { BiLogIn, BiCart } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartProvider";
 const Header: React.FC = () => {
+  const { cart } = useCart();
   return (
     <header className="flex flex-col bg-white h-32 shadow-md shadow-gray-200	sticky top-0 px-5">
       <div className="flex items-center justify-between py-5 border-b">
@@ -24,7 +26,10 @@ const Header: React.FC = () => {
             </span>
           </button>
           <Link to={"/cart"}>
-            <button className="mr-5 border p-1 rounded-sm">
+            <button className="mr-5 border p-1 rounded-sm relative">
+              <span className="absolute w-6 h-6 rounded-full bg-red-500 text-white -right-4 -top-4">
+                {cart.length}
+              </span>
               <BiCart fontSize={30} />
             </button>
           </Link>
