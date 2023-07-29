@@ -37,11 +37,11 @@ const Cart = () => {
                   </td>
                   <td>
                     <div>
-                      <button className="w-8 h-8 rounded-sm bg-green-500 text-white" >
+                      <button className="inline-flex items-center justify-center w-8 h-8 rounded-sm bg-green-500 text-white" >
                         <BiPlus/>
                       </button>
                       <span>{item.qty}</span>
-                      <button className="w-8 h-8 rounded-sm bg-red-500 text-white">
+                      <button className="inline-flex items-center justify-center w-8 h-8 rounded-sm bg-red-500 text-white">
                         <BiMinus />
                       </button>
                     </div>
