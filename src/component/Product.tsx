@@ -1,13 +1,13 @@
-import { useCartDispatch } from "../context/CartProvider";
+import { useCart, useCartDispatch } from "../context/CartProvider";
 import { IproductFetch } from "../services/fetchProduct";
-import { commaMoney } from "../utils/Helper";
+import { commaMoney, productOfCart } from "../utils/Helper";
 interface dataProps {
   data: IproductFetch[] | undefined;
 }
 
 const Product: React.FC<dataProps> = ({ data }) => {
   const disptch = useCartDispatch();
-  // const cart = useCart();
+  const { cart } = useCart();
 
   const addProductHandler = (product: IproductFetch) => {
     disptch({ type: "AddToCart", payload: product });
@@ -37,7 +37,7 @@ const Product: React.FC<dataProps> = ({ data }) => {
               onClick={() => addProductHandler(product)}
               className="bg-green-500 text-white py-2 mt-2 rounded-lg"
             >
-              AddToCart
+              {productOfCart(product.id, cart) !== -1 ? "InCart" : "AddToCart"}
             </button>
           </div>
         </div>

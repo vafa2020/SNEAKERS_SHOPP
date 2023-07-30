@@ -99,7 +99,7 @@ const Cart = () => {
         </div>
       </div>
       <div className="w-1/4 border-2 rounded-lg p-2">
-        <h1 className="text-center">جزئیات خرید</h1>
+        <h1 className="text-center font-bold">جزئیات خرید</h1>
         <div className="flex flex-col items-start mt-5">
           <div className="flex items-center justify-between w-full mt-5">
             <p>قیمت اصلی کالا</p>
