@@ -19,12 +19,14 @@ const Header: React.FC = () => {
           />
         </div>
         <div className="flex items-center">
-          <button className="flex items-center border p-1 rounded-sm">
-            <span>ورود/ثبت نام</span>
-            <span>
-              <BiLogIn fontSize={30} />
-            </span>
-          </button>
+          <Link to="signup">
+            <button className="flex items-center border p-1 rounded-sm">
+              <span>ورود/ثبت نام</span>
+              <span>
+                <BiLogIn fontSize={30} />
+              </span>
+            </button>
+          </Link>
           <Link to={"/cart"}>
             <button className="mr-5 border p-1 rounded-sm relative">
               <span className="absolute w-6 h-6 rounded-full bg-red-500 text-white -right-4 -top-4">

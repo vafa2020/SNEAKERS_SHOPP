@@ -1,7 +1,7 @@
-const Checkout: React.FC = () => {
+const Checkout = () => {
   return (
     <div>
-      <div>Checkout</div>
+      <div>Checkout page</div>
     </div>
   );
 };

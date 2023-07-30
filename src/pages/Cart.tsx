@@ -113,6 +113,9 @@ const Cart = () => {
             <p>قیمت کالا با تخفیف</p>
             <p>{commaMoney(total)}</p>
           </div>
+          <Link to="/checkout" className="w-full mt-5">
+            <button className="bg-white shadow-2xl rounded-md w-full p-2 text-green-500 border-green-400 border-2 hover:bg-green-500 hover:text-white">ادامه فرآیند خرید</button>
+          </Link>
         </div>
       </div>
     </div>
