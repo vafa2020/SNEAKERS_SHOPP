@@ -114,7 +114,7 @@ const Signup = () => {
               type="submit"
               className="font-bold rounded-lg shadow-lg shadow-indigo-500/40 bg-white p-2 mt-5"
             >
-              ورود
+              ثبت نام
             </button>
           </form>
         )}
