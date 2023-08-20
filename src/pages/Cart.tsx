@@ -1,4 +1,4 @@
-import { useCart, useCartDispatch } from "../context/CartProvider";
+import { useCart, useCartDispatch } from "../context/cart/CartProvider";
 import { BiPlus, BiMinus, BiTrash } from "react-icons/bi";
 import { commaMoney } from "../utils/Helper";
 import { IproductFetch } from "../services/fetchProduct";
@@ -114,7 +114,9 @@ const Cart = () => {
             <p>{commaMoney(total)}</p>
           </div>
           <Link to="/checkout" className="w-full mt-5">
-            <button className="bg-white shadow-2xl rounded-md w-full p-2 text-green-500 border-green-400 border-2 hover:bg-green-500 hover:text-white">ادامه فرآیند خرید</button>
+            <button className="bg-white shadow-2xl rounded-md w-full p-2 text-green-500 border-green-400 border-2 hover:bg-green-500 hover:text-white">
+              ادامه فرآیند خرید
+            </button>
           </Link>
         </div>
       </div>

@@ -1,15 +1,12 @@
-import { ReactNode } from "react";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
-type propsLayout = {
-  children: ReactNode;
-};
+import { Outlet } from "react-router-dom";
 
-const Layout: React.FC<propsLayout> = ({ children }) => {
+const Layout = () => {
   return (
     <div>
       <Header />
-      <main className="p-20 h-full flex justify-center">{children}</main>
+      <Outlet />
       <Footer />
     </div>
   );

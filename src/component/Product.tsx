@@ -1,4 +1,4 @@
-import { useCart, useCartDispatch } from "../context/CartProvider";
+import { useCart, useCartDispatch } from "../context/cart/CartProvider";
 import { IproductFetch } from "../services/fetchProduct";
 import { commaMoney, productOfCart } from "../utils/Helper";
 interface dataProps {

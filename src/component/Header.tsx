@@ -1,6 +1,6 @@
 import { BiLogIn, BiCart } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import { useCart } from "../context/CartProvider";
+import { useCart } from "../context/cart/CartProvider";
 const Header: React.FC = () => {
   const { cart } = useCart();
   return (

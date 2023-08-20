@@ -5,15 +5,15 @@ import React, {
   Dispatch,
   useContext,
 } from "react";
-import { cartActions, cartReducer, initialState } from "./cart/reducer";
-import { IinitialState } from "./cart/type";
+import { cartActions, cartReducer, initialState } from "./reducer";
+import { IinitialState } from "./type";
 
 type CartProviderProps = {
   children: React.ReactNode;
 };
 
 const cartContext = createContext<IinitialState | null>(null);
-const cartContextDispatch = createContext<Dispatch<cartActions> | null>(null);
+const cartDispatchContext = createContext<Dispatch<cartActions> | null>(null);
 
 const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const [cart, dispatch] = useReducer<Reducer<IinitialState, cartActions>>(
@@ -22,9 +22,9 @@ const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   );
   return (
     <cartContext.Provider value={cart}>
-      <cartContextDispatch.Provider value={dispatch}>
+      <cartDispatchContext.Provider value={dispatch}>
         {children}
-      </cartContextDispatch.Provider>
+      </cartDispatchContext.Provider>
     </cartContext.Provider>
   );
 };
@@ -42,7 +42,7 @@ export const useCart = (): IinitialState => {
   return cart;
 };
 export const useCartDispatch = (): Dispatch<cartActions> => {
-  const dispatch = useContext(cartContextDispatch);
+  const dispatch = useContext(cartDispatchContext);
   if (dispatch === null) {
     throw new Error("useCartDispatch must be used within a cartProvider");
   }
