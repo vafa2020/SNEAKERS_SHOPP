@@ -13,7 +13,7 @@ const ProductList: React.FC = () => {
     getProduct();
   }, []);
   return (
-    <div className="flex items-start w-full">
+    <div className="flex items-start w-full p-10">
       <Product data={dataFetch} />
       <Filter />
     </div>
