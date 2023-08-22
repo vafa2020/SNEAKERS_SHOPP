@@ -16,11 +16,8 @@ const Product: React.FC<dataProps> = ({ data }) => {
   return (
     <div className="grid grid-cols-3 gap-3 grow">
       {data?.map((product) => (
-        <Link to={`productdetail/${product.id}`}>
-          <div
-            key={product.id}
-            className="flex flex-col items-center justify-center shadow-lg cursor-pointer w-full rounded-md border-2 hover:border-green-400"
-          >
+        <Link to={`productdetail/${product.id}`} key={product.id}>
+          <div className="flex flex-col items-center justify-center shadow-lg cursor-pointer w-full rounded-md border-2 hover:border-green-400">
             <img className="h-52" src={product.image} alt={product.name} />
             <div className="flex flex-col w-full p-5">
               <div className="flex items-center">

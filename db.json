@@ -2,10 +2,10 @@
   "product": [
     {
       "id": 1,
-      "name": "AdidasZx8000",
-      "brand": "Adidas",
-      "size": 42,
-      "color": "yellow",
+      "name": "adidasZx8000",
+      "brand": "adidas",
+      "size": [42, 43, 44],
+      "color": ["yellow", "indigo", "gray"],
       "description": [
         { "support": "گارانتی مادام العمر" },
         { "support": "اورجینال" },
@@ -18,10 +18,10 @@
     },
     {
       "id": 2,
-      "name": "AdidasZxFlux",
-      "brand": "Adidas",
-      "size": 42,
-      "color": "blue",
+      "name": "adidasZxFlux",
+      "brand": "adidas",
+      "size": [42, 43, 44],
+      "color": ["blue", "red"],
       "description": [
         { "support": "گارانتی مادام العمر" },
         { "support": "اورجینال" },
@@ -34,10 +34,10 @@
     },
     {
       "id": 3,
-      "name": "AdidusUltraBoost",
-      "brand": "Adidas",
-      "size": 41,
-      "color": "gray",
+      "name": "adidusUltraBoost",
+      "brand": "adidas",
+      "size": [41, 43, 44],
+      "color": ["gray", "red", "pink"],
       "description": [
         { "support": "گارانتی مادام العمر" },
         { "support": "اورجینال" },
@@ -50,10 +50,10 @@
     },
     {
       "id": 4,
-      "name": "PumaBmw",
-      "brand": "Puma",
-      "size": 41,
-      "color": "black",
+      "name": "pumaBmw",
+      "brand": "puma",
+      "size": [41, 43, 44],
+      "color": ["indigo", "red", "blue"],
       "description": [
         { "support": "گارانتی مادام العمر" },
         { "support": "اورجینال" },
@@ -66,10 +66,10 @@
     },
     {
       "id": 5,
-      "name": "PumaDrift",
-      "brand": "Puma",
-      "size": 40,
-      "color": "white",
+      "name": "pumaDrift",
+      "brand": "puma",
+      "size": [40, 43, 44],
+      "color": ["purple", "red", "yellow"],
       "description": [
         { "support": "گارانتی مادام العمر" },
         { "support": "اورجینال" },
@@ -82,10 +82,10 @@
     },
     {
       "id": 6,
-      "name": "PumaHybrid",
-      "brand": "Puma",
-      "size": 44,
-      "color": "black",
+      "name": "pumaHybrid",
+      "brand": "puma",
+      "size": [44, 43, 44],
+      "color": ["indigo", "purple", "orange"],
       "description": [
         { "support": "گارانتی مادام العمر" },
         { "support": "اورجینال" },
@@ -98,10 +98,10 @@
     },
     {
       "id": 7,
-      "name": "NikeAirJordan1Retro",
-      "brand": "Nike",
-      "size": 44,
-      "color": "red",
+      "name": "nikeAirJordan1Retro",
+      "brand": "nike",
+      "size": [44, 43, 44],
+      "color": ["red", "purple", "orange"],
       "description": [
         { "support": "گارانتی مادام العمر" },
         { "support": "اورجینال" },
@@ -114,10 +114,10 @@
     },
     {
       "id": 8,
-      "name": "NikeAirJordan4Retro",
-      "brand": "Nike",
-      "size": 43,
-      "color": "blue",
+      "name": "nikeAirJordan4Retro",
+      "brand": "nike",
+      "size": [43, 43, 44],
+      "color": ["blue", "red"],
       "description": [
         { "support": "گارانتی مادام العمر" },
         { "support": "اورجینال" },
@@ -130,10 +130,10 @@
     },
     {
       "id": 9,
-      "name": "NikeAirJordanBasketball",
-      "brand": "Nike",
-      "size": 43,
-      "color": "pink",
+      "name": "nikeAirJordanBasketball",
+      "brand": "nike",
+      "size": [43, 43, 44],
+      "color": ["pink", "red", "gray"],
       "description": [
         { "support": "گارانتی مادام العمر" },
         { "support": "اورجینال" },
