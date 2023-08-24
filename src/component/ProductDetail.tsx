@@ -1,8 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useFetch } from "../hook/useFetch";
 import { commaMoney } from "../utils/Helper";
+import { useCartDispatch } from "../context/cart/CartProvider";
+import { IproductFetch } from "../services/fetchProduct";
+import { BiArrowFromLeft, BiArrowFromRight } from "react-icons/bi";
 
 const ProductDetail = () => {
+  const dispatch = useCartDispatch();
   let { id } = useParams();
   const ID: number = id !== undefined ? Number(id) : 1;
   const data = useFetch({ id: ID });
@@ -13,6 +17,9 @@ const ProductDetail = () => {
       </div>
     );
   }
+  const addProduct = (product: IproductFetch) => {
+    dispatch({ type: "AddToCart", payload: product });
+  };
 
   return (
     <div className="h-screen p-10 ">
@@ -20,7 +27,7 @@ const ProductDetail = () => {
         <div className="flex items-center justify-center w-2/5">
           <img className="h-40" src={data?.image} alt={data.name} />
         </div>
-        <div className="flex flex-col justify-between flex-1 justify-start h-full p-3">
+        <div className="flex flex-col justify-between w-2/5 h-full p-3">
           <div className="flex items-center">
             <span className="font-bold text-red-400">نام کالا:</span>
             <h2 className="font-bold text-xl text-gray-400">
@@ -56,7 +63,10 @@ const ProductDetail = () => {
           </div>
           <div className="flex items-start">
             <span className="font-bold text-red-400">توضیحات: &nbsp;</span>
-            <ul style={{listStyleType:" disclosure-closed"}} className="flex flex-col mr-5">
+            <ul
+              style={{ listStyleType: " disclosure-closed" }}
+              className="flex flex-col mr-5"
+            >
               {data.description.map((des, index) => (
                 <li key={index} className="text-gray-400 font-bold">
                   {des.support}
@@ -70,6 +80,15 @@ const ProductDetail = () => {
               &nbsp;{commaMoney(data.offPrice)}
             </h3>
           </div>
+        </div>
+        <div className="flex flex-1">
+          <button
+            className="flex items-center bg-green-400 p-3 rounded-md text-white"
+            onClick={() => addProduct(data)}
+          >
+            <span className="ml-2 font-bold">addToCart</span>
+            <BiArrowFromRight size="25"/> 
+          </button>
         </div>
       </div>
     </div>

@@ -38,7 +38,7 @@ const Cart = () => {
     dispatch({ type: "Decrement", payload: product });
   };
   return (
-    <div className="flex items-start">
+    <div className="flex items-start p-5 h-screen">
       <div className="flex-grow">
         <h1 className="font-bold ">سبد خرید</h1>
         <div>

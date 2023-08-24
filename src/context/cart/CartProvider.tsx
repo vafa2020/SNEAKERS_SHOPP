@@ -31,9 +31,8 @@ const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
 
 export default CartProvider;
 
-// interface useCartProps {
-//   cart: () => IinitialState;
-// }
+
+
 export const useCart = (): IinitialState => {
   const cart = useContext(cartContext);
   if (cart === null) {
