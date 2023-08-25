@@ -10,9 +10,6 @@ type authProviderProps = {
   children: React.ReactNode;
 };
 
-// interface IAuthContext {
-//   setAuth: Dispatch<SetStateAction<boolean>>;
-// }
 const authContext = createContext<boolean>(false);
 const authDispatchContext = createContext<Dispatch<SetStateAction<boolean>>>(
   () => {}

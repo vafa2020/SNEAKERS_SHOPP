@@ -1,20 +1,12 @@
-import { useEffect, useState } from "react";
-import { fetchProduct, IproductFetch } from "../services/fetchProduct";
 import Product from "./Product";
 import Filter from "./Filter";
+import { useProduct } from "../context/product/ProductProvider";
 
 const ProductList: React.FC = () => {
-  const [dataFetch, setDataFetch] = useState<IproductFetch[] | undefined>();
-  useEffect(() => {
-    const getProduct = async () => {
-      const data = await fetchProduct();
-      setDataFetch(data);
-    };
-    getProduct();
-  }, []);
+  const products = useProduct();
   return (
     <div className="flex items-start w-full p-10">
-      <Product data={dataFetch} />
+      <Product data={products} />
       <Filter />
     </div>
   );

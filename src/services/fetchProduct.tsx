@@ -1,5 +1,3 @@
-import { http } from "./http";
-
 export interface IproductFetch {
   id: number;
   name: string;
@@ -13,14 +11,3 @@ export interface IproductFetch {
   image: string;
   qty?: number;
 }
-
-export const fetchProduct = async (): Promise<IproductFetch[] | undefined> => {
-  try {
-    const data = await http.get("/product");
-    if (data.status === 200) {
-      return data.data;
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};

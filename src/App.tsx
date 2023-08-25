@@ -12,17 +12,17 @@ import ProductDetail from "./component/ProductDetail";
 function App() {
   return (
     <ProviderContext>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<ProductList />} />
-          <Route path="productdetail/:id" element={<ProductDetail />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="checkout" element={<Checkout />} />
-          <Route path="login" element={<Login />} />
-          <Route path="signup" element={<Signup />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Route>
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<ProductList />} />
+            <Route path="productdetail/:id" element={<ProductDetail />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="checkout" element={<Checkout />} />
+            <Route path="login" element={<Login />} />
+            <Route path="signup" element={<Signup />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Route>
+        </Routes>
     </ProviderContext>
   );
 }

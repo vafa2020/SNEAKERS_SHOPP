@@ -1,10 +1,31 @@
 import { BiLogIn, BiCart } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/cart/CartProvider";
+import {
+  useProduct,
+  useProductDispatch,
+} from "../context/product/ProductProvider";
+import { useHelpProduct } from "../context/product/ProductHelpProvider";
+
 const Header: React.FC = () => {
   const { cart } = useCart();
+  const products = useProduct();
+  const helpProduct = useHelpProduct();
+  const setProducts = useProductDispatch();
+
+  const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    const filtered = products.filter((product) => {
+      return product.name.toLowerCase().indexOf(value.toLowerCase()) !== -1;
+    });
+    setProducts(filtered);
+
+    if (value.length === 0) {
+      setProducts(helpProduct);
+    }
+  };
   return (
-    <header className="flex flex-col bg-white h-32 shadow-md shadow-gray-200	sticky top-0 px-5">
+    <header className="flex flex-col bg-white h-32 shadow-md shadow-gray-200 sticky top-0 px-5">
       <div className="flex items-center justify-between py-5 border-b">
         <div className="flex items-center">
           <div className="flex items-center ml-5">
@@ -16,6 +37,7 @@ const Header: React.FC = () => {
             type="text"
             placeholder="جستجو"
             dir="rtl"
+            onChange={changeHandler}
           />
         </div>
         <div className="flex items-center">
