@@ -4,20 +4,27 @@ import {
   useProductDispatch,
 } from "../context/product/ProductProvider";
 import { useHelpProduct } from "../context/product/ProductHelpProvider";
-import { IproductFetch } from "../services/fetchProduct";
 const Filter: React.FC = () => {
   const setProduct = useProductDispatch();
   const helpProduct = useHelpProduct();
   const [brandData, setBrandData] = useState<Array<string>>([]);
-
+  // const filteredBrand = helpProduct.filter((product) =>
+  //   brandData.length > 0
+  //     ? brandData.every((brand) => product.brand.includes(brand))
+  //     : helpProduct
+  // );
   useEffect(() => {
-    const filteredBrand = helpProduct.filter((product) =>
-      brandData.length > 0
-        ? brandData.every((brand) => product.brand.includes(brand))
-        : helpProduct
-    );
-    setProduct(filteredBrand);
+    const tempProduct = [];
+
+    for (let brand of brandData) {
+      tempProduct.push(...helpProduct.filter((a) => a.brand === brand));
+    }
+    setProduct(tempProduct);
+    if (brandData.length === 0) {
+      setProduct(helpProduct);
+    }
   }, [brandData]);
+
   const brandHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, checked } = e.target;
     const res = brandData.map((b) => b).includes(value);
@@ -27,9 +34,8 @@ const Filter: React.FC = () => {
       const unChecked = brandData.filter((b) => b !== value);
       setBrandData(unChecked);
     }
-
-    // setBrand(unChecked);
   };
+
   return (
     <div className="w-96">
       <div>
