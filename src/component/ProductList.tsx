@@ -6,8 +6,8 @@ const ProductList: React.FC = () => {
   const products = useProduct();
   return (
     <div className="flex items-start w-full p-10">
-      <Product data={products} />
       <Filter />
+      <Product data={products} />
     </div>
   );
 };
